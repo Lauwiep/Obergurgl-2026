@@ -18,14 +18,14 @@ const data = {
     arrivalTime: "15:00-20:00",
     notes: [
       "Check winterbanden/sneeuwkettingen (verplicht bij omstandigheden).",
-      "Vignet: Oostenrijk vereist (koop online of bij grens).",
+      "Vignet: Oostenrijk vereist (koop online of bij grens)."
     ]
   },
   stay: {
     name: "Hotel / Appartement (The Crystal VAYA)",
     address: "Straat + plaats (Gurglerstraße 90 in Obergurgl)",
     checkin: "15:00",
-    checkout: "10:00",
+    checkout: "10:00"
   },
   schedule: [
     { day: "Woensdag", plan: "Reisdag + inchecken + diner" },
@@ -33,7 +33,7 @@ const data = {
     { day: "Vrijdag", plan: "Skidag + apres borrel / apres wellnes + diner" },
     { day: "Zaterdag", plan: "Skidag + apres borrel / apres wellnes + diner" },
     { day: "Zondag", plan: "Laatste skidag" },
-    { day: "Maandag", plan: "Uitchecken + terugreis - Tschüss! " },
+    { day: "Maandag", plan: "Uitchecken + terugreis - Tschüss! " }
   ],
   packing: {
     title: "Paklijst (klik om af te vinken)",
