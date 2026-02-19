@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 
 const data = {
   title: "Wintersport 2026",
-  subtitle: "Alle praktische info op één plek – deel deze link met de groep.",
+  subtitle: "Alle praktische info op één plek – deel deze link met de groep. Zie ik deze aanpassing?",
   highlights: [
     { label: "Bestemming", value: "Obergurgl" },
     { label: "Data", value: "za 24 jan – za 31 jan" },
