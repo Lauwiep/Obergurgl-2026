@@ -3,10 +3,10 @@
 import { useMemo, useState } from "react";
 
 const data = {
-  title: "Wintersport 2026",
+  title: "Wintersport 2026 🏂🎿🍻🥂🎉 ",
   subtitle: "Alle praktische info op één plek – deel deze link met de groep.",
   highlights: [
-    { label: "Bestemming", value: "Obergurgl" },
+    { label: "Bestemming", value: "Obergurgl 🏔️ " },
     { label: "Data", value: "woe 25 maart – ma 30 maart" },
     { label: "Groepsapp", value: " Zie WhatsApp voor de laatste info" }
   ],
@@ -22,22 +22,18 @@ const data = {
     ]
   },
   stay: {
-    name: "Hotel / Appartement (vul in)",
-    address: "Straat + plaats (vul in)",
+    name: "Hotel / Appartement (The Crystal VAYA)",
+    address: "Straat + plaats (Gurglerstraße 90 in Obergurgl)",
     checkin: "15:00",
     checkout: "10:00",
-    contact: "+43 ...",
-    notes: ["Ontbijt: 07:30–10:00", "Wellness: (regels/uren invullen)"]
   },
   schedule: [
-    { day: "Zaterdag", plan: "Reisdag + inchecken + diner" },
-    { day: "Zondag", plan: "Eerste skidag + apres / spelletjes" },
-    { day: "Maandag", plan: "Ski + lunch op piste" },
-    { day: "Dinsdag", plan: "Optioneel: wellness / avondactiviteit" },
-    { day: "Woensdag", plan: "Ski + foto moment" },
-    { day: "Donderdag", plan: "Ski + gezamenlijk diner" },
-    { day: "Vrijdag", plan: "Laatste skidag + inpakken" },
-    { day: "Zaterdag", plan: "Uitchecken + terugreis" }
+    { day: "Woensdag", plan: "Reisdag + inchecken + diner" },
+    { day: "Donderdag", plan: "Eerste skidag + apres borrel / apres wellnes + diner " },
+    { day: "Vrijdag", plan: "Skidag + apres borrel / apres wellnes + diner" },
+    { day: "Zaterdag", plan: "Skidag + apres borrel / apres wellnes + diner" },
+    { day: "Zondag", plan: "Laatste skidag" },
+    { day: "Maandag", plan: "Uitchecken + terugreis - Tschüss! " },
   ],
   packing: {
     title: "Paklijst (klik om af te vinken)",
@@ -46,10 +42,11 @@ const data = {
       "Zorgpas + reisverzekering",
       "Skikleding (jas/broek, thermo, handschoenen, muts)",
       "Skihelm + skibril",
+      "Skispullen - Snowboard en/of ski's incl. schoenen",
       "Zonnebrand + lippenbalsem",
       "Sneeuwkettingen (indien nodig) / ijskrabber",
       "Opladers + powerbank",
-      "Badkleding (voor wellness, indien van toepassing)",
+      "Badkleding (voor wellness, verplicht in het zwembad)",
       "Medicatie / pleisters",
       "Cash/creditcard"
     ]
