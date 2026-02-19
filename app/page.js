@@ -11,7 +11,7 @@ const data = {
     { label: "Groepsapp", value: "WhatsApp (link hieronder)" }
   ],
   links: [
-    { label: "📍 Google Maps accommodatie", href: "https://maps.google.com" },
+    { label: "📍 Google Maps accommodatie", href: "https://www.google.com/maps/place/The+Crystal+VAYA+Unique/@46.875188,11.0295681,17z/data=!4m9!3m8!1s0x4782cc7d1988730f:0xa5c6edb46d84bb2b!5m2!4m1!1i2!8m2!3d46.8751844!4d11.032143!16s%2Fg%2F1td9zk0r?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D" },
     { label: "💬 WhatsApp groep", href: "https://chat.whatsapp.com/..." },
     { label: "🎿 Skigebied info", href: "https://www.obergurgl.com/" }
   ],
