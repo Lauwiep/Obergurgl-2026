@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 
 const data = {
   title: "🏂🎿🍻🥂🎉",
-  subtitle: "Alle praktische info op één plek – deel deze link met de groep.",
+  subtitle: "Alle praktische info op één plek.",
   highlights: [
     { label: "Verblijf", value: "The Crystal VAYA Unique" },
     { label: "Aankomst", value: "wo 25 maart (15:00–20:00)" },
