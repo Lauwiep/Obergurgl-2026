@@ -14,9 +14,11 @@ const data = {
       label: "📍 Google Maps hotel",
       href: "https://www.google.com/maps/place/The+Crystal+VAYA+Unique/@46.875188,11.0295681,17z/data=!4m9!3m8!1s0x4782cc7d1988730f:0xa5c6edb46d84bb2b!5m2!4m1!1i2!8m2!3d46.8751844!4d11.032143!16s%2Fg%2F1td9zk0r?entry=ttu"
     },
-    label: "🛌 Hotel info",
+    {
+      label: "🛌 Hotel info",
       href: "https://www.vayaresorts.com/nl/hotel/vaya-unique-the-crystal/?gad_source=1&gad_campaignid=19850673065&gbraid=0AAAAABJeaakwBcSX9OjHohrjSTooXdlRC&gclid=EAIaIQobChMImdK6hKmLkwMVsqWDBx0ZRSYFEAAYAiAAEgKNQvD_BwE"
     },
+    {
     { label: "🎿 Skigebied info", href: "https://www.obergurgl.com/" }
   ],
   stay: {
