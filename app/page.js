@@ -3,12 +3,12 @@
 import { useMemo, useState } from "react";
 
 const data = {
-  title: "Obergurgl 2026 🏂🎿🍻🥂🎉",
+  title: "🏂🎿🍻🥂🎉",
   subtitle: "Alle praktische info op één plek – deel deze link met de groep.",
   highlights: [
     { label: "Verblijf", value: "The Crystal VAYA Unique" },
     { label: "Aankomst", value: "wo 25 maart (15:00–20:00)" },
-    { label: "Vertrek", value: "ma 30 maart (uit. 10:00)" }
+    { label: "Vertrek", value: "ma 30 maart (uiterlijk 10:00)" }
   ],
   links: [
     {
