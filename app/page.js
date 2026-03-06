@@ -74,7 +74,6 @@ function Section({ id, title, children }) {
   padding: 18,
   boxShadow: "0 12px 28px rgba(11,45,92,0.12)"
 }}
-``
       >
         {children}
       </div>
