@@ -1,3 +1,7 @@
+"use client";
+
+import { useMemo, useState } from "react";
+
 const data = {
   title: "Wintersport 2026 🏂🎿🍻🥂🎉",
   subtitle: "Alle praktische info op één plek – deel deze link met de groep.",
@@ -18,31 +22,31 @@ const data = {
   travel: {
     meetingPoint: "Utrecht – (vul P+R / adres in)",
     departTime: "(vul tijd in)",
+    distance: "913 kilometer",
     arrivalTime: "15:00–20:00",
     notes: [
-      "Check winterbanden/sneeuwkettingen (verplicht bij omstandigheden).",
-      "Vignet: Oostenrijk vereist (koop online of bij grens)."
+      "Een vignet is aan te raden (regel een vignet per auto).",
+      "Parkeren kan bij het hotel (incl. laadmogelijkheid).",
+      "Check winterbanden/sneeuwkettingen (verplicht bij omstandigheden)."
     ]
   },
   stay: {
     name: "The Crystal VAYA Unique",
     address: "Gurglerstraße 90, 6456 Obergurgl, Oostenrijk",
-    checkin: "15:00",
-    checkout: "10:00",
-    contact: "(vul telefoon/mail hotel in)",
+    arrival: "Woensdag 25 maart",
+    checkin: "Vanaf 15:00 (uiterlijk 20:00 i.v.m. avondeten)",
+    depart: "Maandag 30 maart",
+    checkout: "Uiterlijk 10:00",
     notes: [
-      "Wellness: badkleding verplicht in het zwembad (vul sauna-regels evt. aan).",
-      "Check ontbijt-/diner tijden (vul aan zodra bekend)."
+      "Ontbijt en avondeten is inclusief en in het hotel.",
+      "Avondeten: woensdag t/m zondag.",
+      "Ontbijt: donderdag t/m maandag."
     ]
   },
-  schedule: [
-    { day: "Woensdag", plan: "Reisdag + inchecken + diner" },
-    { day: "Donderdag", plan: "Eerste skidag + après borrel / après wellness + diner" },
-    { day: "Vrijdag", plan: "Skidag + après borrel / après wellness + diner" },
-    { day: "Zaterdag", plan: "Skidag + après borrel / après wellness + diner" },
-    { day: "Zondag", plan: "Laatste skidag" },
-    { day: "Maandag", plan: "Uitchecken + terugreis – Tschüss!" }
-  ],
+  ski: {
+    skipass: "Skipas voor 4 dagen: donderdag t/m zondag.",
+    extra: "Skiverhuur kan je op de dag van aankomst regelen."
+  },
   packing: {
     title: "Paklijst (klik om af te vinken)",
     items: [
@@ -59,18 +63,81 @@ const data = {
       "Cash/creditcard"
     ]
   },
+  tips: [
+    "Regel een vignet per auto.",
+    "Skiverhuur kan je op de dag van aankomst regelen.",
+    "Vergeet je badkleding niet voor de zwembaden (verplicht)."
+  ],
   faq: [
     {
       q: "Hoe laat vertrekken we?",
-      a: "Zie reisinfo hierboven. Zorg dat je 15 min eerder klaarstaat."
+      a: "Zet de vertrektijd en het verzamelpunt hierboven bij Reisinfo."
     },
     {
       q: "Wie rijdt met wie mee?",
       a: "We maken een carpool-indeling in de groepsapp."
-    },
-    {
-      q: "Skipas regelen we samen of individueel?",
-      a: "Voeg hier de afspraak toe (bijv. ter plekke of online)."
     }
   ]
 };
+
+function Section({ id, title, children }) {
+  return (
+    <section id={id} style={{ padding: "18px 18px", maxWidth: 980, margin: "0 auto" }}>
+      <h2 style={{ margin: "0 0 12px", fontSize: 22, color: "#0B2D5C" }}>{title}</h2>
+      <div
+        style={{
+          background: "rgba(255,255,255,0.92)",
+          border: "1px solid rgba(11,45,92,0.12)",
+          borderRadius: 16,
+          padding: 16
+        }}
+      >
+        {children}
+      </div>
+    </section>
+  );
+}
+
+export default function Page() {
+  const [checked, setChecked] = useState({});
+  const packingItems = useMemo(() => data.packing?.items ?? [], []);
+
+  const toggle = (item) => setChecked((prev) => ({ ...prev, [item]: !prev[item] }));
+
+  return (
+    <main style={{ background: "transparent", minHeight: "100vh" }}>
+      <header style={{ padding: "28px 18px 10px", maxWidth: 980, margin: "0 auto" }}>
+        {/* LOGO (hoort hier, niet in het data object) */}
+        <img
+          src="/Logo Obergurgl.png"
+          alt="Logo Obergurgl"
+          style={{
+            width: "240px",
+            maxWidth: "85%",
+            display: "block",
+            margin: "0 auto 14px"
+          }}
+        />
+
+        {/* Header kaart */}
+        <div
+          style={{
+            background: "linear-gradient(120deg, rgba(11,45,92,0.92), rgba(11,45,92,0.76))",
+            borderRadius: 18,
+            color: "#FFF4E6",
+            padding: 20,
+            border: "1px solid rgba(255,255,255,0.18)"
+          }}
+        >
+          <h1 style={{ margin: 0, fontSize: 32, letterSpacing: 0.2 }}>{data.title}</h1>
+          <p style={{ margin: "8px 0 0", opacity: 0.95 }}>{data.subtitle}</p>
+
+          <div
+            style={{
+              display: "grid",
+              gap: 10,
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              marginTop: 16
+            }}
+          >
+            {(data.highlights ?? []).map((h) => (
