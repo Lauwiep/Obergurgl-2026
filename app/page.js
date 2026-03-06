@@ -87,15 +87,24 @@ export default function Page() {
   const toggle = (item) => setChecked((prev) => ({ ...prev, [item]: !prev[item] }));
 
   return (
-    <main style={{ minHeight: "100vh" }}>
+   <main
+  style={{
+    minHeight: "100vh",
+    background: "transparent" // layout.js regelt het oranje
+  }}
+>
       <header style={{ padding: "28px 18px 10px", maxWidth: 980, margin: "0 auto" }}>
-        {/* LOGO */}
-        <img
-          src="/Logo%20Obergurgl.png"
-          alt="Logo Obergurgl"
-          style={{ width: 220, display: "block", margin: "0 auto 14px" }}
-        />
-
+       <img
+  src="/Logo%20Obergurgl.png"
+  alt="Logo Obergurgl"
+  style={{
+    width: "220px",
+    display: "block",
+    margin: "0 auto 16px",
+    borderRadius: 14,
+    boxShadow: "0 10px 30px rgba(0,0,0,0.18)"
+  }}
+/>
         {/* HEADER CARD */}
         <div
           style={{
