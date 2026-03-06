@@ -65,7 +65,8 @@ const data = {
       "Opladers + powerbank",
       "Badkleding (voor wellness, verplicht in het zwembad)",
       "Medicatie - in ieder geval wat paracetamolletjes voor de ochtenden..",
-      "Cash/creditcard"
+      "Cash/creditcard",
+      "De wintersport kit (krijgen jullie nog... 👀)"
     ]
   }
 };
