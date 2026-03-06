@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 
 const data = {
-  title: "🏂🎿🍻🥂🎉",
   subtitle: "Alle praktische info op één plek.",
   highlights: [
     { label: "Verblijf", value: "The Crystal VAYA Unique" },
