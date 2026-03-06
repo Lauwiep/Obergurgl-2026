@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 const data = {
-  subtitle: "Alle praktische info op één plek.",
+  subtitle: "Woehoeeee het is bijna zover! Hierbij wat praktische info.",
   highlights: [
     { label: "Verblijf", value: "The Crystal VAYA Unique" },
     { label: "Aankomst", value: "wo 25 maart (15:00–20:00)" },
@@ -23,7 +23,7 @@ const data = {
     href: "https://www.obergurgl.com/"
   },
     {
-      label: "🪩 Skiknallers",
+      label: "🪩 Skiknallersssssss",
       href: "spotify.nl"}
 ],
   stay: {
@@ -34,23 +34,23 @@ const data = {
     departDay: "Maandag 30 maart",
     checkout: "Uiterlijk 10:00",
     notes: [
-      "Ontbijt en avondeten is inclusief en in het hotel.",
-      "Avondeten: woensdag t/m zondag.",
-      "Ontbijt: donderdag t/m maandag."
+      "Ontbijt en avondeten is inclusief en in het hotel",
+      "Avondeten: woensdag t/m zondag",
+      "Ontbijt: donderdag t/m maandag"
     ]
   },
   travel: {
     distance: "913 kilometer",
-    vignette: "Een vignet is aan te raden (regel een vignet per auto).",
-    parking: "Parkeren kan bij het hotel incl. laadmogelijkheid.",
+    vignette: "Een vignet is aan te raden (regel een vignet per auto)",
+    parking: "Parkeren kan bij het hotel incl. laadmogelijkheid",
     tips: [
-      "Regel een vignet per auto.",
-      "Skiverhuur kan je op de dag van aankomst regelen.",
-      "Vergeet je badkleding niet voor de zwembaden, daar is dit verplicht."
+      "Regel een vignet per auto",
+      "Skiverhuur kan je op de dag van aankomst regelen",
+      "Vergeet je badkleding niet voor de zwembaden, daar is dit verplicht"
     ]
   },
   ski: {
-    skipass: "Skipas voor 4 dagen: donderdag t/m zondag."
+    skipass: "Skipas voor 4 dagen: donderdag t/m zondag"
   },
   packing: {
     title: "Paklijst (klik om af te vinken)",
@@ -64,7 +64,7 @@ const data = {
       "Sneeuwkettingen (indien nodig) / ijskrabber",
       "Opladers + powerbank",
       "Badkleding (voor wellness, verplicht in het zwembad)",
-      "Medicatie / pleisters",
+      "Medicatie - in ieder geval wat paracetamolletjes voor de ochtenden..",
       "Cash/creditcard"
     ]
   }
@@ -225,7 +225,6 @@ export default function Page() {
 
       <footer style={{ padding: "18px 18px 40px", maxWidth: 980, margin: "0 auto", color: "#0B2D5C" }}>
         <small style={{ opacity: 0.9 }}>
-          Tip: pas de teksten bovenin aan in <code>const data</code> en commit — Vercel update automatisch.
         </small>
       </footer>
     </main>
