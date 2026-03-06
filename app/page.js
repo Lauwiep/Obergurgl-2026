@@ -3,39 +3,27 @@
 import { useMemo, useState } from "react";
 
 const data = {
-  title: "Wintersport 2026 🏂🎿🍻🥂🎉",
+  title: "Obergurgl 2026 🏂🎿🍻🥂🎉",
   subtitle: "Alle praktische info op één plek – deel deze link met de groep.",
   highlights: [
-    { label: "Bestemming", value: "Obergurgl 🏔️" },
-    { label: "Data", value: "woe 25 maart – ma 30 maart" },
-    { label: "Groepsapp", value: "Zie WhatsApp voor de laatste info" }
+    { label: "Verblijf", value: "The Crystal VAYA Unique" },
+    { label: "Aankomst", value: "wo 25 maart (15:00–20:00)" },
+    { label: "Vertrek", value: "ma 30 maart (uit. 10:00)" }
   ],
   links: [
     {
-      label: "📍 Google Maps accommodatie",
+      label: "📍 Google Maps hotel",
       href: "https://www.google.com/maps/place/The+Crystal+VAYA+Unique/@46.875188,11.0295681,17z/data=!4m9!3m8!1s0x4782cc7d1988730f:0xa5c6edb46d84bb2b!5m2!4m1!1i2!8m2!3d46.8751844!4d11.032143!16s%2Fg%2F1td9zk0r?entry=ttu"
     },
     { label: "🎿 Skigebied info", href: "https://www.obergurgl.com/" }
-    // Tip: voeg WhatsApp link toe als je 'm hebt:
-    // { label: "💬 WhatsApp groep", href: "https://chat.whatsapp.com/..." }
+    // Later: { label: "💬 WhatsApp groep", href: "https://chat.whatsapp.com/..." }
   ],
-  travel: {
-    meetingPoint: "Utrecht – (vul P+R / adres in)",
-    departTime: "(vul tijd in)",
-    distance: "913 kilometer",
-    arrivalTime: "15:00–20:00",
-    notes: [
-      "Een vignet is aan te raden (regel een vignet per auto).",
-      "Parkeren kan bij het hotel (incl. laadmogelijkheid).",
-      "Check winterbanden/sneeuwkettingen (verplicht bij omstandigheden)."
-    ]
-  },
   stay: {
     name: "The Crystal VAYA Unique",
-    address: "Gurglerstraße 90, 6456 Obergurgl, Oostenrijk",
-    arrival: "Woensdag 25 maart",
-    checkin: "Vanaf 15:00 (uiterlijk 20:00 i.v.m. avondeten)",
-    depart: "Maandag 30 maart",
+    address: "Gurglerstraße 90, Obergurgl",
+    arrivalDay: "Woensdag 25 maart",
+    checkin: "Vanaf 15:00, uiterlijk 20:00 (avondeten)",
+    departDay: "Maandag 30 maart",
     checkout: "Uiterlijk 10:00",
     notes: [
       "Ontbijt en avondeten is inclusief en in het hotel.",
@@ -43,9 +31,18 @@ const data = {
       "Ontbijt: donderdag t/m maandag."
     ]
   },
+  travel: {
+    distance: "913 kilometer",
+    vignette: "Een vignet is aan te raden (regel een vignet per auto).",
+    parking: "Parkeren kan bij het hotel incl. laadmogelijkheid.",
+    tips: [
+      "Regel een vignet per auto.",
+      "Skiverhuur kan je op de dag van aankomst regelen.",
+      "Vergeet je badkleding niet voor de zwembaden, daar is dit verplicht."
+    ]
+  },
   ski: {
-    skipass: "Skipas voor 4 dagen: donderdag t/m zondag.",
-    extra: "Skiverhuur kan je op de dag van aankomst regelen."
+    skipass: "Skipas voor 4 dagen: donderdag t/m zondag."
   },
   packing: {
     title: "Paklijst (klik om af te vinken)",
@@ -62,22 +59,7 @@ const data = {
       "Medicatie / pleisters",
       "Cash/creditcard"
     ]
-  },
-  tips: [
-    "Regel een vignet per auto.",
-    "Skiverhuur kan je op de dag van aankomst regelen.",
-    "Vergeet je badkleding niet voor de zwembaden (verplicht)."
-  ],
-  faq: [
-    {
-      q: "Hoe laat vertrekken we?",
-      a: "Zet de vertrektijd en het verzamelpunt hierboven bij Reisinfo."
-    },
-    {
-      q: "Wie rijdt met wie mee?",
-      a: "We maken een carpool-indeling in de groepsapp."
-    }
-  ]
+  }
 };
 
 function Section({ id, title, children }) {
@@ -105,21 +87,16 @@ export default function Page() {
   const toggle = (item) => setChecked((prev) => ({ ...prev, [item]: !prev[item] }));
 
   return (
-    <main style={{ background: "transparent", minHeight: "100vh" }}>
+    <main style={{ minHeight: "100vh" }}>
       <header style={{ padding: "28px 18px 10px", maxWidth: 980, margin: "0 auto" }}>
-        {/* LOGO (hoort hier, niet in het data object) */}
+        {/* LOGO */}
         <img
-          src="/Logo Obergurgl.png"
+          src="/Logo%20Obergurgl.png"
           alt="Logo Obergurgl"
-          style={{
-            width: "240px",
-            maxWidth: "85%",
-            display: "block",
-            margin: "0 auto 14px"
-          }}
+          style={{ width: 220, display: "block", margin: "0 auto 14px" }}
         />
 
-        {/* Header kaart */}
+        {/* HEADER CARD */}
         <div
           style={{
             background: "linear-gradient(120deg, rgba(11,45,92,0.92), rgba(11,45,92,0.76))",
@@ -129,7 +106,7 @@ export default function Page() {
             border: "1px solid rgba(255,255,255,0.18)"
           }}
         >
-          <h1 style={{ margin: 0, fontSize: 32, letterSpacing: 0.2 }}>{data.title}</h1>
+          <h1 style={{ margin: 0, fontSize: 32 }}>{data.title}</h1>
           <p style={{ margin: "8px 0 0", opacity: 0.95 }}>{data.subtitle}</p>
 
           <div
@@ -141,3 +118,98 @@ export default function Page() {
             }}
           >
             {(data.highlights ?? []).map((h) => (
+              <div key={h.label} style={{ background: "rgba(255,255,255,0.14)", borderRadius: 14, padding: 12 }}>
+                <div style={{ fontSize: 12, opacity: 0.9 }}>{h.label}</div>
+                <div style={{ fontSize: 16, fontWeight: 700 }}>{h.value}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 }}>
+            {(data.links ?? []).map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: "#FFF4E6",
+                  textDecoration: "none",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  padding: "10px 12px",
+                  borderRadius: 999
+                }}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      <Section id="verblijf" title="🏨 Verblijfinformatie">
+        <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.7 }}>
+          <li><strong>{data.stay.name}</strong></li>
+          <li>{data.stay.address}</li>
+          <li><strong>Aankomst:</strong> {data.stay.arrivalDay}</li>
+          <li><strong>Inchecktijd:</strong> {data.stay.checkin}</li>
+          <li><strong>Vertrek:</strong> {data.stay.departDay}</li>
+          <li><strong>Uitchecktijd:</strong> {data.stay.checkout}</li>
+        </ul>
+
+        <div style={{ marginTop: 12 }}>
+          <strong>Overig</strong>
+          <ul style={{ margin: "8px 0 0", paddingLeft: 18, lineHeight: 1.7 }}>
+            {(data.stay?.notes ?? []).map((n) => <li key={n}>{n}</li>)}
+          </ul>
+        </div>
+      </Section>
+
+      <Section id="route" title="🚗 Routeinformatie">
+        <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.7 }}>
+          <li><strong>Afstand:</strong> {data.travel.distance}</li>
+          <li><strong>Vignet:</strong> {data.travel.vignette}</li>
+          <li><strong>Parkeren:</strong> {data.travel.parking}</li>
+        </ul>
+      </Section>
+
+      <Section id="skipas" title="🎟️ Skipas">
+        <p style={{ margin: 0, lineHeight: 1.7 }}>{data.ski.skipass}</p>
+      </Section>
+
+      <Section id="tips" title="💡 Tips">
+        <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.7 }}>
+          {(data.travel?.tips ?? []).map((t) => <li key={t}>{t}</li>)}
+        </ul>
+      </Section>
+
+      <Section id="paklijst" title={`✅ ${data.packing.title}`}>
+        <div style={{ display: "grid", gap: 10 }}>
+          {packingItems.map((item) => (
+            <label
+              key={item}
+              style={{
+                display: "flex",
+                gap: 10,
+                alignItems: "center",
+                padding: 12,
+                border: "1px solid rgba(11,45,92,0.12)",
+                borderRadius: 12,
+                background: checked[item] ? "rgba(11,45,92,0.08)" : "white"
+              }}
+            >
+              <input type="checkbox" checked={!!checked[item]} onChange={() => toggle(item)} />
+              <span style={{ textDecoration: checked[item] ? "line-through" : "none" }}>{item}</span>
+            </label>
+          ))}
+        </div>
+      </Section>
+
+      <footer style={{ padding: "18px 18px 40px", maxWidth: 980, margin: "0 auto", color: "#0B2D5C" }}>
+        <small style={{ opacity: 0.9 }}>
+          Tip: pas de teksten bovenin aan in <code>const data</code> en commit — Vercel update automatisch.
+        </small>
+      </footer>
+    </main>
+  );
+}
