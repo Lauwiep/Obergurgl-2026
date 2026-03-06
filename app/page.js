@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 const data = {
-  subtitle: "Woehoeeee het is bijna zover! Hierbij wat praktische info.",
+  subtitle: "Woehoeeee het is bijna zover! Hierbij praktische info.",
   highlights: [
     { label: "Verblijf", value: "The Crystal VAYA Unique" },
     { label: "Aankomst", value: "wo 25 maart (15:00–20:00)" },
