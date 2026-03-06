@@ -107,11 +107,12 @@ export default function Page() {
   src="/Logo%20Obergurgl.png"
   alt="Logo Obergurgl"
   style={{
-    width: "220px",
+    width: "420px",
+    maxWidth: "92vw",
+    height: "auto",
     display: "block",
     margin: "0 auto 16px",
-    borderRadius: 14,
-    boxShadow: "0 10px 30px rgba(0,0,0,0.18)"
+    filter: "drop-shadow(0 10px 18px rgba(11,45,92,0.20))"
   }}
 />
         {/* HEADER CARD */}
