@@ -65,14 +65,16 @@ const data = {
 function Section({ id, title, children }) {
   return (
     <section id={id} style={{ padding: "18px 18px", maxWidth: 980, margin: "0 auto" }}>
-      <h2 style={{ margin: "0 0 12px", fontSize: 22, color: "#0B2D5C" }}>{title}</h2>
+      <h2 style={{ margin: "0 0 12px", fontSize: 22, fontWeight: 800, color: "#0B2D5C" }}>{title}</h2>
       <div
-        style={{
-          background: "rgba(255,255,255,0.92)",
-          border: "1px solid rgba(11,45,92,0.12)",
-          borderRadius: 16,
-          padding: 16
-        }}
+       style={{
+  background: "rgba(255,244,230,0.92)",           // crème kaart op oranje
+  border: "1px solid rgba(11,45,92,0.18)",
+  borderRadius: 18,
+  padding: 18,
+  boxShadow: "0 12px 28px rgba(11,45,92,0.12)"
+}}
+``
       >
         {children}
       </div>
