@@ -24,7 +24,7 @@ const data = {
   },
     {
       label: "🪩 Skiknallersssssss",
-      href: "spotify.nl"}
+      href: "https://open.spotify.com/playlist/0zSPVKee5GhXMVw13r4Bbx?si=3LNpd1rPRwm6JlNrB_ZEzw"}
 ],
   stay: {
     name: "The Crystal VAYA Unique",
